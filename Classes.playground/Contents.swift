@@ -40,3 +40,46 @@ human2
 var array = [Human]()
 array.append(human1)
 array.append(human2)
+
+class Student {
+    var name : String
+    var surname : String
+    var yearOfBorn : Int
+    var mark : Double
+    
+    init(name: String, surname : String, yearOfBorn : Int, mark : Double) {
+        self.name = name
+        self.surname = surname
+        self.yearOfBorn = yearOfBorn
+        self.mark = mark
+    }
+    
+    func printObject() -> () {
+        print("Name: \(name)\nSurname: \(surname)\nYearOfBorn: \(yearOfBorn)\nMark: \(mark)\n-------")
+    }
+}
+
+var student1 = Student(name: "Alex",
+                       surname: "Golovanov",
+                       yearOfBorn: 1983,
+                       mark: 5)
+
+//student1.printObject()
+
+var student2 = Student(name: "Sergei",
+                       surname: "Vashenko",
+                       yearOfBorn: 1999,
+                       mark: 6)
+
+var student3 = Student(name: "Dmitri",
+                       surname: "Archipod",
+                       yearOfBorn: 2002,
+                       mark: 7)
+
+let group = [student1, student2, student3]
+
+for oneStudent in group.sorted(by: { (s1, s2) -> Bool in
+    s1.mark > s2.mark
+}) {
+    oneStudent.printObject()
+}
