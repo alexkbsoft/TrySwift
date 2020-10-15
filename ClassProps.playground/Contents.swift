@@ -1,5 +1,6 @@
 import UIKit
 
+
 class Car {
     var petsWeight: Int
     var productsWeight: Int
@@ -27,4 +28,5 @@ if (car.totalWeight > Car.maxWeight) {
 } else {
     print("ready to drive")
 }
+
 
