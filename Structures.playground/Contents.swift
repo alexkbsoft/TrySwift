@@ -28,12 +28,27 @@ func changeSite(site: Site) -> Site {
     return site
 }
 
+class Host {
+    var site: Site
+    
+    init(site: Site) {
+        self.site = site;
+    }
+}
+
 changeSite(site: firstSite)
 firstSite
+
+let host = Host(site: firstSite)
+var siteFromHost = host.site
+siteFromHost.siteName = "Ololo"
+siteFromHost
+
 
 //===
 // let secondWebSite = Site()
 // if firstSite === secondWebSite { // false
-//  print("ecuals")
+//  print("equals")
 // }
 
+firstSite
