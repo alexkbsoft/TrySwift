@@ -78,8 +78,6 @@ var student3 = Student(name: "Dmitri",
 
 let group = [student1, student2, student3]
 
-for oneStudent in group.sorted(by: { (s1, s2) -> Bool in
-    s1.mark > s2.mark
-}) {
-    oneStudent.printObject()
+for oneStudent in group.sorted( by: { (s1, s2) -> Bool in s1.mark > s2.mark }) {
+        oneStudent.printObject()
 }
